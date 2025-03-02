@@ -7,7 +7,7 @@
 let x = 1004658465n; //bigInt to String
 let xToString = String(x);
 console.log("* to String");
-console.table([xToString, typeof xToString]);
+// console.table([xToString, typeof xToString]);
 
 //2. * to boolean
 // let y = 0; // number to boolean
@@ -26,9 +26,9 @@ console.log("* to boolean");
 //3. * to number
 // let z = "33abc"; //string to number
 // let z = "33"; //string to number
-let z = "33.12"; //string to number //1004658465
+// let z = "33.12"; //string to number
 // let z = ""; //string to number
-// let z = null; //null to number
+let z = null; //null to number
 // let z = undefined; //undefined to number
 // let z = true; //boolean to number
 // let z = 165478654n; //bigInt to number
@@ -44,10 +44,10 @@ console.log("* to number");
 // let a = null; //null to bigInt (not convert)
 // let a = undefined; //undefined to bigInt (not convert)
 // let a = true; //boolean to bigInt
-let a = false; //boolean to bigInt
+// let a = false; //boolean to bigInt
 let aTobigInt = BigInt(a);
 console.log("* to bigInt");
-// console.table([aTobigInt, typeof aTobigInt]);
+console.table([aTobigInt, typeof aTobigInt]);
 
 // let b = "10";
 let b = "10.1512";

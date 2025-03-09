@@ -6,7 +6,7 @@ console.log(`${typeof str} and str : ${str}`);
 console.log(`${typeof anotherStr} and anotherStr : ${anotherStr}`);
 
 // Constructor
-console.log(`str instanceof String : {str instanceof String}`);
+console.log(`str instanceof String : ${str instanceof String}`);
 console.log(`anotherStr instanceof String :${anotherStr instanceof String}`);
 
 console.log("Instance propertie of String");
@@ -107,7 +107,7 @@ let sum = "2+2";
 console.log(`eval(sum)`);
 
 let sum1 = new String("2+2");
-// console.log(`eval(sum1)`);//not expected ourput
+// console.log(`eval(sum1)`);//not expected output
 let temp = sum1.valueOf();
 console.log(`using valueOf in object :${eval(temp)}`);
 

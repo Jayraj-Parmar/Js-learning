@@ -23,8 +23,13 @@ console.log(`Array :${array["01"]}`);
 console.log(`Array.from : ${Array.from("foo")}`);
 
 console.log(Array.fromAsync("foo")); //not understand
+console.log(`Array.from : ${Array.from({ name: "Jayraj" })}`); //Interesting output []
 
 console.log(`ArrayOf : ${Array.of(10, 5, 10, "jayaj")}`);
+let score1 = 100;
+let score2 = 200;
+let score3 = 300;
+console.log(`ArrayOf score : ${Array.of(score1, score2, score3)}`);
 
 console.log(`isArray : ${Array.isArray([10, "jayraj"])}`);
 
@@ -70,10 +75,11 @@ console.log("****flat****");
 console.log(arr1.flat());
 console.log(arr1.flat(2));
 console.log(arr1.flat(3));
+console.log(arr1.flat(Infinity));
 
 // forEach
 array1.forEach((element) => {
-  console.log(element);
+  console.log(`Iteration using foreach : ${element}`);
 });
 
 // array's method study in mdn compulsory once

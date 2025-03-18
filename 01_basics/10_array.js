@@ -20,17 +20,22 @@ console.log(`Array :${array["01"]}`);
 // console.log(`Array :${array[-6]}`);
 
 // Static method of Array
-Array.from("foo");
-Array.fromAsync();
+console.log(`Array.from : ${Array.from("foo")}`);
 
-//properties
+console.log(Array.fromAsync("foo")); //not understand
+
+console.log(`ArrayOf : ${Array.of(10, 5, 10, "jayaj")}`);
+
+console.log(`isArray : ${Array.isArray([10, "jayraj"])}`);
+
+//Properties of Array
 console.log(`length of Array :${array.length}`);
 
-//method
+//Instance method of Array
 //Static isArray()
 console.log(`isArray:${Array.isArray(arr)}`);
 
-// push() and pop
+// push() and pop()
 array.push(3);
 console.log(`Push : ${array}`);
 array.pop();
@@ -41,3 +46,34 @@ array.unshift(9);
 console.log(`unshift : ${array}`);
 array.shift();
 console.log(`shift : ${array}`);
+
+// combine array
+const array1 = [10, "jayraj", "parmar", true];
+const array2 = [10, "jayraj", "parmar", true];
+console.log(`concat : ${array1.concat(array2)}`);
+console.log(`sprede oprator : ${[...array1, ...array2]}`);
+console.log(`array1 :${array1}`);
+console.log(`array1 :${array2}`);
+
+//entries()
+console.log(`entries : ${array1.entries().next.value}`); //not valid
+const ite = array1.entries(); //must be in new variables
+console.log(ite.next().value);
+console.log(ite.next().value);
+console.log(ite.next().value);
+console.log(ite.next().value);
+console.log(ite.next().value);
+
+// flat()
+const arr1 = [0, 1, 2, [[3, 4], 100], [[3, 4]]];
+console.log("****flat****");
+console.log(arr1.flat());
+console.log(arr1.flat(2));
+console.log(arr1.flat(3));
+
+// forEach
+array1.forEach((element) => {
+  console.log(element);
+});
+
+// array's method study in mdn compulsory once

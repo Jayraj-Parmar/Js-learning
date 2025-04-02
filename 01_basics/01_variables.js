@@ -2,11 +2,13 @@
 // JavaScript is a dynamic language and not static, which means that variables can hold
 // values of different types during runtime. Unlike languages such as Typescript or Java,
 // you don't need to declare the data type of a variable explicitly.
+// In java(int x,float y)
 
 const accountId = 1234; //Not Change if overwrite
 //try to overwrite value of const variable
 accountId = 2; //TypeError: Assignment to constant variable
 
+// if object and array store in const variable even thhough it change
 const myObject = { key: "value" };
 myObject.key = "otherValue";
 console.log(myObject); //{ key: 'otherValue' }

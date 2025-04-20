@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Practice</title>
+  </head>
+  <body>
+    <h1>Practice</h1>
+    <h2>About this page</h2>
+    <ul class="langague">
+      <li>Javascript</li>
+      <li>Create for Create new Element</li>
+    </ul>
+    <h2>New Methods we learn in this code file</h2>
+    <ol class="methods"></ol>
+    <script>
+      //create new Element
+      const createNewElement = (text) => {
+        const selectList = document.querySelector(".langague");
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(text));
+        selectList.appendChild(li);
+      };
+      createNewElement("Create textNode and appendChild");
+
+      //remove elemet
+      const removeElement = (element) => {
+        const elementRemove = document.querySelector(element);
+        console.log(elementRemove);
+        elementRemove.remove();
+      };
+      removeElement("li:first-child");
+
+      //edit elelment
+      const editElement = (element) => {
+        const li = document.createElement("li");
+        console.log(li);
+        li.appendChild(
+          document.createTextNode("Create function for Create new Element")
+        );
+        const select = document.querySelector(element);
+        select.replaceWith(li);
+      };
+      editElement("li:nth-child(1)");
+
+      const create = (text) => {
+        const selectList = document.querySelector(".methods");
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(text));
+        selectList.appendChild(li);
+      };
+      create("createElement('')");
+      create("appendChild('')");
+      create("createTextNode('')");
+      create("remove()");
+      create("replaceWith('')");
+    </script>
+  </body>
+</html>

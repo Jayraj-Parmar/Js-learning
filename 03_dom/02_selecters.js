@@ -1,6 +1,6 @@
 // In this code file about fetch attribute of html document
 // diff. between innerHtml,innerText and textContent
-// select li like css using css selector
+// querySelector(): and querySelectorAll(): These methods allow you to use CSS selectors to target specific child elements.
 
 const mainHeading = document.getElementById("main");
 // console.log(mainHeading);

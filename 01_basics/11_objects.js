@@ -19,10 +19,10 @@ const obj = {
 
 // fetch value
 console.log(`name : ${obj.name}`);
-// console.log(`name : ${obj[name]}`); //name is not define error : solution ""
+// console.log(`name : ${obj[name]}`); //name is not define error : solution "name"
 console.log(`name : ${obj["name"]}`);
 console.log(`e-mail : ${obj["e mail"]}`);
-console.log(`Symbol : ${obj[mySymbol]}`); //must fetch using this syntex
+console.log(`Symbol : ${obj[mySymbol]}`); //must fetch using this syntext
 
 // freez Object
 obj.name = "sumit";
@@ -36,6 +36,11 @@ obj.fun = function () {
 console.log(obj);
 console.log(obj.fun);
 console.log(obj.fun());
+
+obj["fun1"] = function () {
+  console.log(`hello ${this.name}`);
+};
+console.log(obj["fun1"]);
 
 // constructor
 const user = new Object();
@@ -72,6 +77,7 @@ console.log("position from obj : ", position);
 const { position: pos } = obj;
 console.log("position from obj : ", pos);
 
+// Convert Array to Object and static methods
 const array = [
   ["name", "jayraj"],
   ["age", 18],
@@ -90,10 +96,11 @@ console.log("arr's PropertyNames : ", Object.getOwnPropertyNames(arr));
 console.log(Object.getPrototypeOf("foo"));
 
 const proto = {};
-const obj = Object.create(proto);
-console.log(Object.getPrototypeOf(obj) === proto);
+const obj8 = Object.create(proto);
+console.log(Object.getPrototypeOf(obj8) === proto);
 
+// not understude
 const object2 = {};
 const parent = { foo: "bar" };
-Object.setPrototypeOf("", obj, parent);
+Object.setPrototypeOf("", obj8, parent);
 console.log(obj.foo);

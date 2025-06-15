@@ -1,0 +1,42 @@
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/Window/clearInterval -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setInterval() with clearInterval() | JS Learning</title>
+    <style>
+      .red {
+        color: red;
+      }
+      .green {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>setTimeout() and setInterval() are Async function in JS.</h1>
+    <p class="">Hello Word</p>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+      let intervalId;
+      const startBtn = document.getElementById("start");
+      const stopBtn = document.getElementById("stop");
+      const text = document.querySelector("p");
+      startBtn.addEventListener("click", startColorChange);
+      stopBtn.addEventListener("click", stopColorChange);
+      function startColorChange() {
+        if (!intervalId) {
+          intervalId = setInterval(changeColor, 1000);
+        }
+      }
+      function stopColorChange() {
+        clearInterval(intervalId);
+      }
+      function changeColor() {
+        text.className = text.className === "red" ? "green" : "red";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!-- https://developer.mozilla.org/en-US/docs/Web/API/Window/clearTimeout -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeout() with clearTimeout() | JS Learning</title>
+  </head>
+  <body>
+    <h1>setTimeout() and setInterval() are Async function in JS.</h1>
+    <button class="setTime">setTimeout()</button>
+    <button class="clearTime">clearTimeout()</button>
+    <p class="output"></p>
+    <script>
+      let timeID;
+      const setTime = document.querySelector(".setTime");
+      const clearTime = document.querySelector(".clearTime");
+      const output = document.querySelector(".output");
+      function setOutput(text, time) {
+        output.textContent = `${text} ${time} second`;
+      }
+      setTime.addEventListener("click", () => {
+        timeID = setTimeout(setOutput, 3000, "This msg display after", 3);
+      });
+      clearTime.addEventListener("click", () => {
+        clearTimeout(timeID);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!-- https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubbling</title>
+  </head>
+  <body>
+    <div>
+      <button>Click Me</button>
+    </div>
+    <p></p>
+  </body>
+  <script>
+    function handleClick(e) {
+      console.log(e);
+
+      document.getElementsByTagName(
+        "p"
+      )[0].textContent += `you clicked on ${e.currentTarget.tagName} element \n`;
+    }
+    document.body.addEventListener("click", handleClick);
+    document
+      .getElementsByTagName("button")[0]
+      .addEventListener("click", handleClick);
+    document
+      .getElementsByTagName("div")[0]
+      .addEventListener("click", handleClick);
+  </script>
+</html>

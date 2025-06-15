@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubbling</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Click Me!</button>
+    <div class="hidden">
+      <video>
+        <source
+          src="https://263468ca-d5da-4652-bca4-e0f0bea74faf.mdnplay.dev/shared-assets/videos/flower.webm"
+          type="video/webm"
+        />
+        <p>
+          Your browser doesn't support HTML video. Here is a
+          <a href="rabbit320.mp4">link to the video</a> instead.
+        </p>
+      </video>
+    </div>
+  </body>
+  <script>
+    const btn = document.querySelector("button");
+    const div = document.querySelector("div");
+    const video = document.querySelector("video");
+    btn.addEventListener("click", () => div.classList.remove("hidden"));
+    // video.addEventListener("click", () => video.play());
+    div.addEventListener("click", () => div.classList.add("hidden"));
+    // problem: when we click on video to play for video then hidden class add on div so video is not visible.
+    // solution
+    video.addEventListener("click", (e) => {
+      video.play();
+      e.stopPropagation();
+    });
+  </script>
+</html>

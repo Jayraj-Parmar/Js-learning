@@ -47,6 +47,10 @@ for (const [key, value] of map) {
   console.log(key, value);
 }
 
+for (const element of Object.entries(obj)) {
+  console.log(element);
+}
+
 // objects is not itrable using for..of loop
 console.log("for..of - Obj");
 console.log("objects is not itrable using for..of loop");

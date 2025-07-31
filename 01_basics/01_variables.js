@@ -27,3 +27,6 @@ accountState = "Gujarat";
 let name;
 
 console.table([accountId, accountEmail, accountCity, accountState, name]);
+
+// const and let are in Temporal dead Zone
+// let and const are block scoped variables

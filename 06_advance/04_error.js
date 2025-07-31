@@ -6,6 +6,8 @@
 // 4. Type Error
 
 // SyntaxError
+// const a;
+// a = "jayraj"
 
 // const a = "jayraj";
 // const a = "parmar";
@@ -13,8 +15,11 @@
 //     console.log(index)
 // }
 
+// const and let are in Temporal dead Zone
+//let and const are block scoped variables
 // ReferenceError
-// console.log(a);
+// console.log(b); //Temporal dead zone
+// let b = "jayraj";
 
 // RangeError
 let a = 101.5;

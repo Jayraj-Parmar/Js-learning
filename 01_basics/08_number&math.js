@@ -25,10 +25,13 @@ console.log(`isInteger: ${Number.isInteger(10 / 6)}`);
 
 // isNaN()
 console.log(`isNaN : ${Number.isNaN(NaN)}`);
+console.log(`isNaN : ${Number.isNaN(undefined)}`);
+console.log(`isNaN : ${isNaN(NaN)}`);
+console.log(`isNaN : ${isNaN(undefined)}`);
 
 // isSafeInteger();
 console.log(
-  `isSafeInteger: ${Number.isSafeInteger(Number.MAX_SAFE_INTEGER + 1)}`
+  `isSafeInteger: ${Number.isSafeInteger(Number.MAX_SAFE_INTEGER + 1)}`,
 );
 
 // Number.parseFloat() and Number.parseInt()

@@ -88,7 +88,7 @@ console.log(object1);
 console.log("object1's PropertyNames : ", Object.getOwnPropertyNames(object1));
 console.log(
   "fooo(String)'s PropertyNames : ",
-  Object.getOwnPropertyNames("fooo")
+  Object.getOwnPropertyNames("fooo"),
 );
 const arr = ["a", "b", "c"];
 console.log("arr's PropertyNames : ", Object.getOwnPropertyNames(arr));

@@ -21,7 +21,14 @@ const parentUser = {
   isLogIn: true,
 };
 
-// modern Symtaxt
+// modern syntax
 Object.setPrototypeOf(parentUser, userDetails);
+// above syntax like bellow
+
+// const parentUser = {
+//   isLogIn: true,
+//   __proto__:userDetails
+// };
+
 // Object.setPrototypeOf(parentUser, [userDetails, user]);
 console.log(parentUser.__proto__);

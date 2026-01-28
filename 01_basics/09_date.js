@@ -26,7 +26,7 @@ let myDate = new Date(2005, 6, 22, 7, 20, 30, 1);
 // let myDate = new Date("07-22-2005");
 console.log(`myDate : ${myDate.toLocaleString()}`);
 console.log(
-  `from January 1, 1970, to July 22,2005 in milisecondes: ${myDate.getTime()}`
+  `from January 1, 1970, to July 22,2005 in milisecondes: ${myDate.getTime()}`,
 ); //from January 1, 1970, to July 22,2005 in milisecondes
 console.log(`Day: ${myDate.getDay()}`);
 console.log(`Date: ${myDate.getDate()}`);
@@ -40,7 +40,7 @@ console.log(`Milliseconds: ${myDate.getMilliseconds()}`);
 console.log(
   d.toLocaleString("default", {
     weekday: "long",
-  })
+  }),
 );
 //more properties in toLocalString()
 

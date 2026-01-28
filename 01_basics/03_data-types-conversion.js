@@ -41,7 +41,7 @@ console.log("* to number");
 // let a = 101.12; //number to bigInt (not convert)
 // let a = "jayraj"; //String to bigInt (not convert)
 // let a = ""; //String to bigInt
-// let a = null; //null to bigInt (not convert)
+// let a = null; //null to bigInt (not converts)
 // let a = undefined; //undefined to bigInt (not convert)
 // let a = true; //boolean to bigInt
 // let a = false; //boolean to bigInt

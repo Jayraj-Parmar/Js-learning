@@ -73,7 +73,6 @@ const arrowFun = (num1, num2) => {
   return num1 + num2;
 };
 console.log(arrowFun(10, 20));
-
 const arrowFun1 = (num1, num2) => num1 + num2;
 // const arrowFun1 = (num1, num2) => num1 + num2 //execute same as above
 console.log(arrowFun1(10, 20));

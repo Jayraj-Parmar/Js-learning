@@ -14,5 +14,6 @@ function parent2() {
   }
   return child;
 }
+// parent2()();
 const user = parent2();
 user();

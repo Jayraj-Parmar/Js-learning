@@ -11,7 +11,7 @@ console.log(powerOf.prototype);
 function inObject(username, score) {
   this.username = username;
   this.score = score;
-  return this;
+  // return this;
 }
 
 inObject.prototype.increaseScore = function () {
